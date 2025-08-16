@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+#root {
+ display: flex;
+ height: 100dvh;
+ width: 100dvw;
+ font-family:'Open Sans';
+
+}
+
+.col1-edit{
+  flex: 1;
+  display: flex;
+  
+}
+
+.col2-result{
+  flex: 1;
+  background-color: whitesmoke;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper{
+  background-color: white;
+  width: 4.25in;
+  height: 5.5in;
+  box-shadow: 1px 3px 6px gray;
+  padding: 40px 50px 10px 50px;
+}
+
+
+.header{
+  text-align: center;
+}
+
+.name{
+  font-size: 1.5rem;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.job-title{
+  font-size: 0.9rem;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+.contacts{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.contacts p{
+  margin: 0px;
+  font-size: 0.7rem;
+}
+
+.edit-section{
+  padding: 10px 50px 20px 50px;
+  flex: 1;
+  border: 1px solid black;
+  background-color: 	#F9FAFB;
+
+}
+
+.menu-section{
+  background-color: #38BDF8;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 20px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.btn{
+  background-color: transparent;
+  border:  0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: rgb(31, 28, 28);
+  padding: 15px;
+  margin: 0px;
+}
+
+hr{
+  margin: 5px;
+}
+
+.field{
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fieldgroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.nameField, .addressField, .socialsField{
+  display: flex;
+  gap: 20px;
+}
+
+label{
+  font-weight: bold;
+}
+
+
+
+
+.socialsField .field{
+  max-width: 125px;
+}
+
+.fieldgroup-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summary.field{
+  resize: none;
+}
+
+.summary-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-label-wrapper{
+  padding: 5px;
+  background-color: rgb(245, 248, 251);
+}
+
+.summary-title{
+  margin: 0px;
+  font-size: 14px;
+ 
+}
+
+
