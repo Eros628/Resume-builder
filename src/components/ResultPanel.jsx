@@ -2,35 +2,31 @@
 import React, { use, useEffect, useState } from 'react';
 import '../style/App.css';
 
-export function ResultPanel(props){
-
-    const [address, setAddress] = useState();
-
-    useEffect(()=>{
-        setAddress(`${props.value.city},` + `${props.value.country}`);
-    },[props.value.city, props.value.country]);
+export function ResultPanel({values}){
 
 
     return(
         <div className='col2-result'>
             <div className='paper'>
                 <div className='header'>
-                    <p className='name'>{props.value.firstname + " " +props.value.lastname}</p>
-                    <p className='job-title'>{props.value.job}</p>
-                    {props.value.job != null ? <hr/> : null}
+                    <p className='name'>{values.firstname + " " +values.lastname}</p>
+                    <p className='job-title'>{values.job}</p>
+                    {values.job != ""  && <hr/>}
                     <div className='contacts'>
-                        {address != null ? <p>{address}</p>: null}
-                        {props.value.contact != ""? <p>&#8226; { props.value.contact}</p>: null}
-                        {props.value.email!= "" ? <p>&#8226; {props.value.email}</p>: null}
+                        <p>{values.city}</p>
+                        {(values.city !="" && values.country !="") && <p>,</p>}
+                        <p>{values.country}</p>
+                        {values.contact != "" && <p>&#8226; { values.contact}</p>}
+                        {values.email!= "" && <p>&#8226; {values.email}</p>}
                         <p></p>
                     </div>
-                    {props.value.summary !="" ?
+                    {values.summary !="" ?
                     <div className='summary-section'>
                         <div className='summary-label-wrapper'>
                               <p className='summary-title'>SUMMARY</p>
                         </div>
                         <div className='summary-content'>
-                            <p>{props.value.summary}</p>
+                            <p>{values.summary}</p>
                         </div>
                       
                     </div>:null}

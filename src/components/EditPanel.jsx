@@ -1,12 +1,12 @@
 import '../style/App.css';
 import { Mail, Phone} from 'lucide-react';
-export function EditPanel(props){
+export function EditPanel({register}){
     return(
         <>
             <div className='col1-edit'>
                 <Menu></Menu>
                 <div className='edit-section'>
-                    <PersonalPanel value={props.value} handleChange={props.handleChange}></PersonalPanel>
+                    <PersonalPanel register= {register}></PersonalPanel>
                 </div>
             </div>
         </>
@@ -14,7 +14,7 @@ export function EditPanel(props){
     )
 }
 
-function PersonalPanel(prop){
+function PersonalPanel({register}){
     return(
         <>
             <h1>Personal Information</h1>
@@ -23,45 +23,45 @@ function PersonalPanel(prop){
                     <div className='nameField'>
                         <div className='fieldgroup'>
                             <label htmlFor='firstName' >First Name:</label>
-                            <input name='firstname' value={prop.value.firstname} onChange={prop.handleChange} id='firstName' className='firstname field' placeholder='First Name'></input>
+                            <input {...register('firstname')} id='firstName' className='firstname field' placeholder='First Name'></input>
                         </div>
                         <div className='fieldgroup'>
                             <label htmlFor='lastName' >Last Name:</label>
-                            <input name='lastname' value={prop.value.lastname} id='lastName'  onChange={prop.handleChange} className='lastname field' placeholder='Last Name'></input>
+                            <input {...register('lastname')} id='lastName'  className='lastname field' placeholder='Last Name'></input>
                         </div>
                     </div> 
                     <div className='jobField fieldgroup'>
                         <label htmlFor='jobTitle'>Job Title:</label>
-                        <input name='job' value={prop.value.job} onChange={prop.handleChange} id='jobTitle' className='job field' placeholder='Enter Job Title'></input>
+                        <input {...register("job")} id='jobTitle' className='job field' placeholder='Enter Job Title'></input>
                     </div>
                     <div className='addressField'>
                         <div className='fieldgroup'>
                             <label htmlFor='city'>City</label>
-                            <input name='city' value={prop.value.city
-                            } onChange={prop.handleChange} id='city' className='city field' placeholder='Enter Your City'></input>
+                            <input {...register('city')} id='city' className='city field' placeholder='Enter Your City'></input>
                         </div>
                         <div className='fieldgroup'>
                             <label htmlFor='country'>Country</label>
-                            <input name="country" value={prop.value.country} onChange={prop.handleChange} id='country' className='country field' placeholder='Enter Your Country'></input>
+                            <input {...register('country')} id='country' className='country field' placeholder='Enter Your Country'></input>
                         </div>
                         
                     </div>
                     <div className='socialsField'>
                         <div className='fieldgroup-row'>
-                            <Mail/>
-                           
-                            <input name="email" value={prop.value.email} onChange={prop.handleChange} className='email field'></input>
-                        </div>
-                        <div className='fieldgroup-row'>
                             <Phone/>
                            
-                            <input name='contact' value={prop.value.contact} onChange={prop.handleChange} className='contactNum field'></input>
+                            <input {...register('contact')} className='contactNum field'></input>
                         </div>
+                        <div className='fieldgroup-row'>
+                            <Mail/>
+                           
+                            <input {...register('email')} className='email field'></input>
+                        </div>
+                        
                     </div>
 
                     <div className='summaryField fieldgroup'>
                         <label htmlFor='summary'>Summary</label>
-                        <textarea rows={10} value={prop.value.summary} name='summary' onChange={prop.handleChange} className='summary field'></textarea>
+                        <textarea rows={10} {...register('summary')} className='summary field'></textarea>
                     </div>
 
 
