@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root{
+  --large-text: 25px;
+  --medium-text: 14px;
+  --small-text: 11px;
+}
+
 #root {
  display: flex;
  height: 100dvh;
  width: 100dvw;
  font-family:'Open Sans';
-
 }
 
 .col1-edit{
@@ -16,7 +21,7 @@
 .col2-result{
   flex: 1;
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +33,11 @@
   height: 5.5in;
   box-shadow: 1px 3px 6px gray;
   padding: 40px 50px 10px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
 
 
 .header{
@@ -36,13 +45,13 @@
 }
 
 .name{
-  font-size: 1.5rem;
+  font-size: var(--large-text);
   margin: 0px;
   text-transform: uppercase;
 }
 
 .job-title{
-  font-size: 0.9rem;
+  font-size: var(--meduim-text);
   margin: 0px;
   text-transform: capitalize;
 }
@@ -55,7 +64,7 @@
 
 .contacts p{
   margin: 0px;
-  font-size: 0.7rem;
+  font-size: var(--small-text);
 }
 
 .edit-section{
@@ -145,7 +154,6 @@ label{
 .summary-section{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .summary-label-wrapper{
@@ -155,8 +163,16 @@ label{
 
 .summary-title{
   margin: 0px;
-  font-size: 14px;
- 
+  font-size: var(--medium-text);
+}
+
+.summary-label-wrapper{
+  text-align: center;
+}
+
+.summary-content{
+  font-size: var(--small-text);
+  word-wrap: break-word;
 }
 
 

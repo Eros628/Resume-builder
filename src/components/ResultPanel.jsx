@@ -20,7 +20,8 @@ export function ResultPanel({values}){
                         {values.email!= "" && <p>&#8226; {values.email}</p>}
                         <p></p>
                     </div>
-                    {values.summary !="" ?
+                </div>
+                {values.summary !="" &&
                     <div className='summary-section'>
                         <div className='summary-label-wrapper'>
                               <p className='summary-title'>SUMMARY</p>
@@ -29,9 +30,7 @@ export function ResultPanel({values}){
                             <p>{values.summary}</p>
                         </div>
                       
-                    </div>:null}
-
-                </div>
+                    </div>}
             </div>
         </div>
     
