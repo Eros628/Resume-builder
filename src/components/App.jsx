@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../style/App.css'
-import { EditPanel } from './EditPanel';
+import { EditPanel } from './EditPanel/EditPanel';
 import { ResultPanel } from './ResultPanel';
 import { useForm } from 'react-hook-form';
 

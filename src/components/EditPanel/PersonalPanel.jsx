@@ -1,20 +1,6 @@
-import '../style/App.css';
-import { CircleUser, GraduationCap, Mail, NotepadText, Phone, Star} from 'lucide-react';
-export function EditPanel({register}){
-    return(
-        <>
-            <div className='col1-edit'>
-                <Menu></Menu>
-                <div className='edit-section'>
-                    <PersonalPanel register= {register}></PersonalPanel>
-                </div>
-            </div>
-        </>
+import {Mail, Phone} from 'lucide-react';
 
-    )
-}
-
-function PersonalPanel({register}){
+export function PersonalPanel({register}){
     return(
         <>
             <h1>Personal Information</h1>
@@ -73,51 +59,5 @@ function PersonalPanel({register}){
             </form>
         </>
         
-    )
-}
-
-function WorkPanel(){
-
-}
-
-function EducationPanel(){
-
-}
-
-
-function Menu(){
-    return(
-        <div className='menu-section'>
-             <div className='menu'>
-            <ButtonsMenu title={"Personal Information"} >
-                <CircleUser></CircleUser>
-            </ButtonsMenu>
-
-            <ButtonsMenu title={"Work Experience"}>
-                <NotepadText></NotepadText>
-            </ButtonsMenu>
-
-            <ButtonsMenu title={"Education"}>
-                <GraduationCap></GraduationCap>
-            </ButtonsMenu>
-
-            <ButtonsMenu title={"Skills"}>
-                <Star></Star>
-            </ButtonsMenu>
-
-            </div>
-            <div className='open-menu'>
-                
-            </div>
-        </div>
-       
-    )
-}
-
-function ButtonsMenu({title, children}){
-    return(
-        <button className= {title + " btn"} title={title}>
-                {children}
-        </button>   
     )
 }

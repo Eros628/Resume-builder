@@ -2,7 +2,7 @@
 import React, { use, useEffect, useState } from 'react';
 import '../style/App.css';
 
-export function ResultPanel({values}){
+export  function ResultPanel({values}){
 
 
     return(
